@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Sumanta Das Bairagya — I build AI products, and I know how to distribute them</title>
+<meta name="description" content="Co-Founder and Head of Global Community at krako.xyz. I build AI products and I know how to get them adopted — a global community of 600,000+ is my biggest asset.">
+<link rel="canonical" href="https://sumantacs.github.io/">
+<meta property="og:title" content="Sumanta Das Bairagya">
+<meta property="og:description" content="I build AI products, and I know how to distribute them. Global community experience is my biggest asset.">
+<meta property="og:image" content="assets/portrait.jpg">
+<meta name="theme-color" content="#12263A">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#F5F6F7;
+  --paper-2:#ECEEF0;
+  --navy:#12263A;
+  --navy-2:#1B3450;
+  --ink:#16212C;
+  --ink-60:#55636F;
+  --ink-40:#7F8B96;
+  --steel:#2F6690;
+  --steel-light:#5C93B8;
+  --rule:#DCE0E4;
+  --rule-navy:#2C4560;
+  --w:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:'Instrument Sans',system-ui,-apple-system,sans-serif;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+.w{max-width:var(--w);margin:0 auto;padding:0 28px}
+
+h1,h2,h3{margin:0;letter-spacing:-.028em;line-height:1.1;font-weight:700}
+h1{font-size:clamp(2.15rem,1.3rem + 3.3vw,3.5rem);line-height:1.12}
+h2{font-size:clamp(1.6rem,1.1rem + 1.9vw,2.35rem)}
+h3{font-size:1.08rem;letter-spacing:-.015em}
+p{margin:0 0 1.05rem;max-width:64ch}
+.lede{font-size:clamp(1.05rem,.95rem + .5vw,1.2rem);color:var(--ink-60);max-width:60ch}
+.lede b{color:var(--ink);font-weight:600}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--steel);
+  display:block;margin-bottom:14px}
+
+/* ---------- header ---------- */
+.top{border-bottom:1px solid var(--rule);background:rgba(245,246,247,.94);
+  backdrop-filter:blur(8px);position:sticky;top:0;z-index:40}
+.top__in{display:flex;align-items:center;justify-content:space-between;height:60px;gap:20px}
+.name{font-weight:700;font-size:.98rem;letter-spacing:-.02em;text-decoration:none}
+.top nav{display:flex;align-items:center;gap:24px}
+.top nav a{font-size:.88rem;color:var(--ink-60);text-decoration:none}
+.top nav a:hover{color:var(--steel)}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:6px;
+  font-size:.92rem;font-weight:600;text-decoration:none;border:1px solid transparent;
+  transition:background .16s,border-color .16s,color .16s}
+.btn--solid{background:var(--navy);color:#fff}
+.btn--solid:hover{background:var(--steel)}
+.btn--line{border-color:var(--rule);color:var(--ink)}
+.btn--line:hover{border-color:var(--navy)}
+.btn--sm{padding:9px 18px;font-size:.85rem;border-radius:5px}
+.btn--light{background:#fff;color:var(--navy)}
+.btn--light:hover{background:var(--paper-2)}
+:focus-visible{outline:2px solid var(--steel);outline-offset:3px}
+
+/* ---------- hero ---------- */
+.hero{padding:76px 0 72px}
+.hero__grid{display:grid;grid-template-columns:minmax(0,1fr) 268px;gap:56px;align-items:start}
+.open{display:inline-flex;align-items:center;gap:9px;font-size:.85rem;color:var(--steel);
+  margin-bottom:22px;font-weight:500}
+.open i{width:8px;height:8px;border-radius:50%;background:var(--steel);display:block}
+.hero h1 span{color:var(--steel)}
+.hero .lede{margin-top:24px}
+.hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.face{border-radius:8px;overflow:hidden;border:1px solid var(--rule);background:var(--paper-2)}
+.face img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.face__cap{padding:16px 18px 18px;background:#fff;border-top:1px solid var(--rule)}
+.face__cap b{display:block;font-weight:700;font-size:.95rem;letter-spacing:-.015em}
+.face__cap small{display:block;color:var(--ink-60);font-size:.84rem;line-height:1.45;margin-top:4px}
+
+/* ---------- figures band ---------- */
+.band{background:var(--navy);color:#fff}
+.figs{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.fig{padding:36px 30px 38px;border-left:1px solid var(--rule-navy)}
+.fig:first-child{border-left:0;padding-left:0}
+.fig b{display:block;font-size:clamp(1.9rem,1.3rem + 1.8vw,2.7rem);font-weight:700;
+  letter-spacing:-.035em;line-height:1}
+.fig small{display:block;margin-top:10px;font-size:.9rem;line-height:1.5;color:rgba(255,255,255,.72)}
+
+/* ---------- sections ---------- */
+.sec{padding:78px 0}
+.sec__head{max-width:56ch;margin-bottom:42px}
+.sec__head p{margin-top:16px}
+
+/* two halves */
+.halves{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.half{background:#fff;border:1px solid var(--rule);border-radius:8px;padding:30px 28px 32px}
+.half h3{margin-bottom:12px}
+.half p{font-size:.97rem;color:var(--ink-60);margin-bottom:18px}
+.half ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.half li{font-size:.92rem;color:var(--ink-60);padding-left:20px;position:relative;line-height:1.5}
+.half li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:9px;
+  border:1.5px solid var(--steel);border-radius:50%}
+
+
+/* ---------- the idea ---------- */
+.idea{background:var(--paper-2);border-block:1px solid var(--rule)}
+.idea__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}
+.idea h2{margin-bottom:20px}
+.idea p{color:var(--ink-60);font-size:1.02rem}
+.idea p b{color:var(--ink);font-weight:600}
+.clock{background:#fff;border:1px solid var(--rule);border-radius:8px;padding:26px 26px 28px}
+.clock__lbl{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--ink-40);
+  display:flex;justify-content:space-between;gap:12px;margin-bottom:18px}
+.bar{display:flex;height:44px;border-radius:5px;overflow:hidden;border:1px solid var(--rule)}
+.bar i{display:block;height:100%}
+.bar .used{background:var(--paper-2);flex:16}
+.bar .idle{background:var(--steel);flex:8}
+.bar__key{display:flex;gap:24px;margin-top:14px;font-size:.85rem;color:var(--ink-60)}
+.bar__key span{display:flex;align-items:center;gap:8px}
+.bar__key em{width:11px;height:11px;border-radius:3px;display:block;font-style:normal}
+.bar__key .k1{background:var(--paper-2);border:1px solid var(--rule)}
+.bar__key .k2{background:var(--steel)}
+.trio{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);
+  border-radius:8px;overflow:hidden;margin-top:24px}
+.trio div{background:#fff;padding:20px 22px}
+.trio b{display:block;font-weight:700;font-size:.98rem;letter-spacing:-.015em;margin-bottom:5px}
+.trio small{display:block;font-size:.9rem;color:var(--ink-60);line-height:1.5}
+
+/* ---------- experience ---------- */
+.roles{border-top:1px solid var(--rule)}
+.role{display:grid;grid-template-columns:160px minmax(0,1fr);gap:36px;
+  padding:28px 0;border-bottom:1px solid var(--rule)}
+.role__meta{font-size:.88rem;color:var(--ink-40)}
+.role__meta span{display:block;color:var(--steel);margin-top:5px;font-size:.85rem}
+.role h3{margin-bottom:3px}
+.role__org{font-size:.92rem;color:var(--ink-60);margin:0 0 14px}
+.role__org a{color:var(--steel);text-decoration:none}
+.role ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.role li{font-size:.95rem;color:var(--ink-60);line-height:1.55;padding-left:18px;position:relative}
+.role li::before{content:"";position:absolute;left:0;top:.75em;width:9px;height:1px;background:var(--steel-light)}
+.role li b{color:var(--ink);font-weight:600}
+
+/* ---------- reach band ---------- */
+.reach{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.reach div{padding:30px 26px 34px;border-left:1px solid var(--rule-navy)}
+.reach div:first-child{border-left:0;padding-left:0}
+.reach b{display:block;font-size:1.35rem;font-weight:700;letter-spacing:-.025em}
+.reach small{display:block;margin-top:9px;font-size:.88rem;line-height:1.5;color:rgba(255,255,255,.72)}
+
+/* ---------- work list ---------- */
+.list{border-top:1px solid var(--rule)}
+.list a{display:grid;grid-template-columns:minmax(0,240px) minmax(0,1fr) 20px;gap:32px;
+  align-items:baseline;padding:24px 0;border-bottom:1px solid var(--rule);
+  text-decoration:none;transition:color .15s}
+.list a:hover .list__t{color:var(--steel)}
+.list__t{font-weight:700;font-size:1.02rem;letter-spacing:-.015em}
+.list__t small{display:block;font-weight:400;font-size:.8rem;color:var(--ink-40);margin-top:3px}
+.list__d{font-size:.95rem;color:var(--ink-60);line-height:1.55}
+.list__a{color:var(--steel);font-size:.9rem}
+
+/* ---------- skills ---------- */
+.kit{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+.kit h4{font-family:'IBM Plex Mono',monospace;font-size:.72rem;font-weight:400;
+  color:var(--steel);margin:0 0 14px}
+.kit ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.kit li{font-size:.93rem;color:var(--ink-60)}
+
+/* ---------- contact ---------- */
+.say{background:var(--navy);color:#fff;padding:80px 0}
+.say h2{max-width:20ch}
+.say__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,400px);gap:60px;
+  align-items:start;margin-top:36px}
+.say p{color:rgba(255,255,255,.76);font-size:1.05rem}
+.say p b{color:#fff;font-weight:600}
+.prompts{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:11px}
+.prompts li{font-size:.95rem;color:rgba(255,255,255,.76);padding-left:22px;position:relative}
+.prompts li::before{content:"→";position:absolute;left:0;color:var(--steel-light)}
+
+.paths{display:grid;gap:14px}
+.path{background:var(--navy-2);border:1px solid var(--rule-navy);border-radius:8px;padding:24px}
+.path__lbl{font-family:'IBM Plex Mono',monospace;font-size:.72rem;
+  color:rgba(255,255,255,.55);display:block;margin-bottom:8px}
+.path__hd{font-size:1.06rem;font-weight:600;letter-spacing:-.02em;word-break:break-word;
+  text-decoration:none;display:block;margin-bottom:6px}
+a.path__hd:hover{color:var(--steel-light)}
+.path__sub{font-size:.9rem;color:rgba(255,255,255,.62);margin:0 0 18px;line-height:1.5}
+.mail{display:block;background:var(--navy-2);border:1px solid var(--rule-navy);
+  border-radius:8px;padding:26px}
+.mail__lbl{font-family:'IBM Plex Mono',monospace;font-size:.72rem;
+  color:rgba(255,255,255,.55);display:block;margin-bottom:8px}
+.mail__addr{font-size:clamp(1rem,.9rem + .5vw,1.2rem);font-weight:600;letter-spacing:-.02em;
+  word-break:break-all;text-decoration:none;display:block;margin-bottom:20px}
+.mail__addr:hover{color:var(--steel-light)}
+.elsewhere{border-top:1px solid var(--rule-navy);margin-top:22px;padding-top:6px}
+.elsewhere a{display:flex;justify-content:space-between;gap:16px;padding:12px 0;
+  border-bottom:1px solid var(--rule-navy);font-size:.9rem;text-decoration:none}
+.elsewhere a:last-child{border-bottom:0}
+.elsewhere span{color:rgba(255,255,255,.5)}
+.elsewhere a:hover b{color:var(--steel-light)}
+.elsewhere b{font-weight:500}
+
+/* ---------- footer ---------- */
+.end{padding:30px 0;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;
+  font-size:.85rem;color:var(--ink-40)}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .hero__grid{grid-template-columns:1fr;gap:40px}
+  .face{max-width:260px}
+  .halves,.say__grid{grid-template-columns:1fr;gap:20px}
+  .idea__grid{grid-template-columns:1fr;gap:32px}
+  .figs,.reach,.kit{grid-template-columns:repeat(2,1fr)}
+  .fig,.reach div{border-left:0;padding-left:0}
+  .role{grid-template-columns:1fr;gap:12px}
+  .role__meta span{display:inline;margin-left:12px}
+  .list a{grid-template-columns:1fr;gap:8px}
+  .top nav a:not(.btn){display:none}
+  .sec,.say{padding:58px 0}
+  .hero{padding:56px 0 52px}
+}
+@media (max-width:520px){
+  .w{padding:0 20px}
+  .figs,.reach,.kit{grid-template-columns:1fr}
+  .fig,.reach div{padding-top:24px;padding-bottom:24px}
+}
+</style>
+<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="top">
+  <div class="w top__in">
+    <a class="name" href="#top">Sumanta Das Bairagya</a>
+    <nav>
+      <a href="#what">What I do</a>
+      <a href="#idea">The idea</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a class="btn btn--solid btn--sm" href="#contact">Say hello</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="w hero__grid">
+    <div>
+      <span class="open"><i></i>Open to conversations — and always happy to just chat</span>
+
+      <h1>I don't only build AI products.<br><span>I know how to distribute them.</span></h1>
+
+      <p class="lede">
+        Most people can do one or the other. I have spent years doing both — building
+        orchestration and retrieval systems on one side, and growing a
+        <b>global community of 600,000+ people</b> that I have run since 2018 on the other.
+        That community experience is my biggest asset, and it is the reason the things
+        I build actually get used.
+      </p>
+
+      <p class="lede">
+        Today I am Co-Founder and Head of Global Community at <b>Krako.xyz</b> — working on
+        <b>KORA</b> — an open-source system that structures AI requests so a model is only
+        called when a model is genuinely needed.
+      </p>
+
+      <div class="hero__cta">
+        <a class="btn btn--solid" href="#contact">Get in touch</a>
+        <a class="btn btn--line js-cal" href="#">Book a call</a>
+        <a class="btn btn--line" href="https://github.com/sumantacs" target="_blank" rel="noopener">See my work</a>
+      </div>
+    </div>
+
+    <figure class="face" style="margin:0">
+      <img src="assets/portrait.jpg" alt="Sumanta Das Bairagya">
+      <figcaption class="face__cap">
+        <b>Sumanta Das Bairagya</b>
+        <small>Co-Founder &amp; Head of Global Community, Krako.xyz · India</small>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== FIGURES ===== -->
+<section class="band">
+  <div class="w">
+    <div class="figs">
+      <div class="fig"><b>600,000+</b><small>People in the global AI and machine learning community I founded in 2018 and still run</small></div>
+      <div class="fig"><b>8 years</b><small>Across AI research, product, engineering support and community growth</small></div>
+      <div class="fig"><b>3 continents</b><small>Teams and users I have built with — India, Europe and the United States</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHAT I DO ===== -->
+<section class="sec" id="what">
+  <div class="w">
+    <div class="sec__head">
+      <span class="eyebrow">What I do</span>
+      <h2>Building it is half the job. Getting it used is the other half.</h2>
+      <p class="lede">
+        Plenty of good AI products never find their people. Plenty of big communities have
+        nothing solid underneath them. I work on both sides at once, which is the whole point.
+      </p>
+    </div>
+
+    <div class="halves">
+      <article class="half">
+        <h3>I build the product</h3>
+        <p>Orchestration, retrieval and agent systems designed to stay predictable and affordable in production.</p>
+        <ul>
+          <li>Task graph architecture and schema validation</li>
+          <li>Production RAG — hybrid retrieval, routing, groundedness checks</li>
+          <li>Execution telemetry, observability and cost control</li>
+          <li>Knowledge graphs in Neo4j and NetworkX</li>
+        </ul>
+      </article>
+
+      <article class="half">
+        <h3>I get it distributed</h3>
+        <p>Turning a repository into a community, and a community into real adoption. This is the part I am known for.</p>
+        <ul>
+          <li>Grew a global AI community to 600,000+ members</li>
+          <li>Developer outreach across LinkedIn, X, Reddit and dev forums</li>
+          <li>Onboarding paths, documentation and educational content</li>
+          <li>User feedback taken straight back into the roadmap</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== THE IDEA ===== -->
+<section class="idea" id="idea">
+  <div class="w" style="padding-top:70px;padding-bottom:74px">
+    <div class="idea__grid">
+      <div>
+        <span class="eyebrow">The idea behind krako.xyz</span>
+        <h2>The world already owns enough computers. Most of them are asleep.</h2>
+        <p>
+          Your phone does almost nothing for the six to eight hours you are asleep.
+          Your laptop sits closed. The old tablet in the drawer has not been switched on in months.
+          Every one of those devices is real computing power that someone already paid for,
+          idle by default.
+        </p>
+        <p>
+          Krako.xyz is built on a simple idea: <b>let people rent out that idle time</b>.
+          You opt in, choose the hours you genuinely do not need your device, and it joins a
+          distributed network that runs real workloads while you sleep. You earn from capacity
+          you were never using. The network gets compute without anyone pouring concrete for
+          another data centre.
+        </p>
+        <p>
+          <b>KORA</b> is the layer that makes this practical. It breaks work into deterministic
+          task graphs — pieces small enough to run across ordinary consumer devices — and only
+          escalates to a full model when a model is genuinely needed. Less waste on both ends.
+        </p>
+      </div>
+
+      <div>
+        <div class="clock">
+          <span class="clock__lbl"><span>a single device, 24 hours</span><span>typical</span></span>
+          <div class="bar" role="img" aria-label="Roughly sixteen hours of active use and eight hours idle per day">
+            <i class="used"></i><i class="idle"></i>
+          </div>
+          <div class="bar__key">
+            <span><em class="k1"></em>~16 hrs in use</span>
+            <span><em class="k2"></em>~8 hrs idle and earning</span>
+          </div>
+        </div>
+
+        <div class="trio">
+          <div><b>Your device, your hours</b><small>You decide when it participates and when it does not. Nothing runs while you are using it.</small></div>
+          <div><b>Paid for doing nothing</b><small>Earnings come from capacity that was already sitting there, unused, every single night.</small></div>
+          <div><b>Compute without new buildings</b><small>Spare capacity that already exists, pooled — instead of another data centre and another power contract.</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section class="sec" id="experience">
+  <div class="w">
+    <div class="sec__head">
+      <span class="eyebrow">Experience</span>
+      <h2>Research, then product, then community.</h2>
+    </div>
+
+    <div class="roles">
+      <article class="role">
+        <div class="role__meta">2024 — present<span>France</span></div>
+        <div>
+          <h3>Co-Founder &amp; Head of Global Community</h3>
+          <p class="role__org"><a href="https://krako.xyz" target="_blank" rel="noopener">krako.xyz</a></p>
+          <ul>
+            <li>Co-founded Krako.xyz and drove development and adoption of <b>KORA</b> for AI orchestration and cost optimisation.</li>
+            <li>Contributed to KORA across <b>task graph architecture, schema validation, execution telemetry and a terminal-first CLI</b>.</li>
+            <li>Led <b>community growth, user engagement and developer outreach</b> from zero.</li>
+            <li>Created onboarding material, documentation and educational content; supported launches across LinkedIn, X, Reddit and developer communities.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="role">
+        <div class="role__meta">2023 — 2024</div>
+        <div>
+          <h3>LLM Engineer &amp; Product Support Engineer</h3>
+          <p class="role__org">Actionpoint.ai</p>
+          <ul>
+            <li>Supported <b>power users and enterprise teams</b> through onboarding and technical support.</li>
+            <li>Ran walkthroughs and troubleshooting that folded AI workflows into people's existing routines, <b>driving adoption and retention</b>.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="role">
+        <div class="role__meta">2020 — 2021<span>United States</span></div>
+        <div>
+          <h3>Data Scientist</h3>
+          <p class="role__org">Wisecube — AI drug discovery</p>
+          <ul>
+            <li>Worked on <b>AI-driven drug discovery and graph representation learning</b>.</li>
+            <li>Participated in Tox21-related initiatives and automated data science workflows.</li>
+            <li>Built executable notebooks and explored <b>knowledge graph applications</b> across biomedical data.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="role">
+        <div class="role__meta">2018 — present<span>Global</span></div>
+        <div>
+          <h3>Founder, AI &amp; Machine Learning Community</h3>
+          <p class="role__org">Independent · 600,000+ members</p>
+          <ul>
+            <li>Built and still run a <b>global community connecting researchers, engineers and practitioners</b> across time zones, grown to 600,000+ members since 2018.</li>
+            <li>Facilitate knowledge sharing and promote community-generated content at scale.</li>
+            <li>Organise discussions across AI, machine learning and emerging technology.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REACH ===== -->
+<section class="band">
+  <div class="w" style="padding-top:56px;padding-bottom:56px">
+    <span class="eyebrow" style="color:var(--steel-light)">Global reach</span>
+    <h2 style="margin-bottom:34px">Where the work has landed.</h2>
+    <div class="reach">
+      <div><b>India</b><small>Home base, and where most of my community work started.</small></div>
+      <div><b>France</b><small>Krako.xyz is headquartered in Paris. Co-founding and community leadership.</small></div>
+      <div><b>United States</b><small>Drug discovery and knowledge graph work, plus the open-source AI ecosystem.</small></div>
+      <div><b>Worldwide</b><small>Community members and contributors across regions and time zones.</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WORK ===== -->
+<section class="sec" id="work">
+  <div class="w">
+    <div class="sec__head">
+      <span class="eyebrow">Selected work</span>
+      <h2>Things I have built in the open.</h2>
+    </div>
+
+    <div class="list">
+      <a href="https://github.com/Krako-Labs/KORA" target="_blank" rel="noopener">
+        <span class="list__t">KORA<small>Python · TypeScript</small></span>
+        <span class="list__d">An inference operating system that reduces unnecessary LLM calls by structuring intelligence before scaling it. Deterministic task graphs, schema validation, execution telemetry and a terminal-first CLI.</span>
+        <span class="list__a">↗</span>
+      </a>
+      <a href="https://github.com/sumantacs/adaptive-rag-control-layer" target="_blank" rel="noopener">
+        <span class="list__t">adaptive-rag-control-layer<small>Python</small></span>
+        <span class="list__d">A RAG system that decides whether to retrieve and generate at all before doing either. Hybrid dense, BM25 and graph retrieval, deterministic query routing, semantic caching and groundedness checks.</span>
+        <span class="list__a">↗</span>
+      </a>
+      <a href="https://github.com/sumantacs/admet-knowledge-graph-suite" target="_blank" rel="noopener">
+        <span class="list__t">admet-knowledge-graph-suite<small>Python</small></span>
+        <span class="list__d">A cheminformatics suite mapping multidimensional ADMET profiles and heterogeneous drug-target knowledge graphs, built on RDKit and NetworkX.</span>
+        <span class="list__a">↗</span>
+      </a>
+      <a href="https://github.com/sumantacs/bim-data-extractor" target="_blank" rel="noopener">
+        <span class="list__t">bim-data-extractor<small>Python</small></span>
+        <span class="list__d">A Streamlit application using Google Gemini to extract structured data and dimensions from civil engineering blueprints and PDFs.</span>
+        <span class="list__a">↗</span>
+      </a>
+    </div>
+
+    <div class="kit" style="margin-top:56px">
+      <div><h4>AI</h4><ul><li>LLMs</li><li>Prompt engineering</li><li>RAG</li><li>AI agents</li><li>Evaluation</li><li>Cost optimisation</li></ul></div>
+      <div><h4>Technical</h4><ul><li>Python</li><li>SQL</li><li>Neo4j</li><li>Knowledge graphs</li><li>TensorFlow</li><li>PyTorch</li></ul></div>
+      <div><h4>Product</h4><ul><li>Product strategy</li><li>User research</li><li>Roadmapping</li><li>Prioritisation</li><li>Agile / Scrum</li></ul></div>
+      <div><h4>Growth</h4><ul><li>Community building</li><li>Developer relations</li><li>Onboarding design</li><li>Product metrics</li><li>A/B testing</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="say" id="contact">
+  <div class="w">
+    <span class="eyebrow" style="color:var(--steel-light)">Say hello</span>
+    <h2>You don't need a reason to message me.</h2>
+
+    <div class="say__grid">
+      <div>
+        <p>
+          I spent years running a community, so I genuinely enjoy hearing from people —
+          <b>students, career changers, first-time builders, founders, anyone</b>.
+          You don't need a polished pitch or a perfect question. A couple of lines is plenty.
+        </p>
+        <p>Email me, or grab a slot on my calendar — whichever feels easier.</p>
+        <ul class="prompts">
+          <li>"I'm learning AI and I'm stuck on where to start."</li>
+          <li>"I built something small — would you take a look?"</li>
+          <li>"We have an AI product but nobody is using it."</li>
+          <li>"Can we just talk about what you're working on?"</li>
+        </ul>
+      </div>
+
+      <div class="paths">
+
+        <div class="path">
+          <span class="path__lbl">Book a call</span>
+          <span class="path__hd">A 20-minute conversation</span>
+          <p class="path__sub">Pick any slot that suits you. No agenda needed — if you just want to talk through an idea or ask something, that counts.</p>
+          <a class="btn btn--light js-cal" href="#" style="width:100%;justify-content:center">See my calendar</a>
+        </div>
+
+        <div class="path">
+          <span class="path__lbl">Or just email me</span>
+          <a class="path__hd" href="mailto:sumanta.ai.cs@gmail.com">sumanta.ai.cs@gmail.com</a>
+          <p class="path__sub">A couple of lines is plenty. I read everything and I reply.</p>
+          <a class="btn btn--light" href="mailto:sumanta.ai.cs@gmail.com?subject=Hello%20Sumanta" style="width:100%;justify-content:center">Write to me</a>
+
+          <div class="elsewhere">
+            <a href="https://www.linkedin.com/in/sumanta-das-bairagya-055b5617b" target="_blank" rel="noopener"><span>LinkedIn</span><b>Connect &#8599;</b></a>
+            <a href="https://github.com/sumantacs" target="_blank" rel="noopener"><span>GitHub</span><b>@sumantacs &#8599;</b></a>
+            <a href="https://x.com/Sumanta_krako" target="_blank" rel="noopener"><span>X</span><b>@Sumanta_krako &#8599;</b></a>
+            <a href="https://krako.xyz" target="_blank" rel="noopener"><span>Company</span><b>krako.xyz &#8599;</b></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="w end">
+  <span>© 2026 Sumanta Das Bairagya</span>
+  <span>India</span>
+</footer>
+
+<script>
+
+var CALENDLY_URL = "https://calendly.com/sumanta-ai-cs/30min";
+
+document.querySelectorAll(".js-cal").forEach(function (el) {
+  el.href = CALENDLY_URL;            // works even if the widget fails to load
+  el.target = "_blank";
+  el.rel = "noopener";
+  el.addEventListener("click", function (e) {
+    if (window.Calendly) {           // open the popup instead of a new tab
+      e.preventDefault();
+      window.Calendly.initPopupWidget({ url: CALENDLY_URL });
+    }
+  });
+});
+</script>
+</body>
+</html>
