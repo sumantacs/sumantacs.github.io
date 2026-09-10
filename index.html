@@ -7,10 +7,23 @@
 <title>Sumanta Das Bairagya — I build AI products, and I know how to distribute them</title>
 <meta name="description" content="Co-Founder and Head of Global Community at krako.xyz. I build AI products and I know how to get them adopted — a global community of 600,000+ is my biggest asset.">
 <link rel="canonical" href="https://sumantacs.github.io/">
-<meta property="og:title" content="Sumanta Das Bairagya">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sumantacs.github.io/">
+<meta property="og:site_name" content="Sumanta Das Bairagya">
+<meta property="og:title" content="Sumanta Das Bairagya — I build AI products, and I know how to distribute them">
 <meta property="og:description" content="I build AI products, and I know how to distribute them. Global community experience is my biggest asset.">
-<meta property="og:image" content="portrait.jpg">
+<meta property="og:image" content="https://sumantacs.github.io/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sumanta Das Bairagya — I don't only build AI products. I know how to distribute them.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Sumanta_krako">
+<meta name="twitter:creator" content="@Sumanta_krako">
+
 <meta name="theme-color" content="#12263A">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,9 +68,9 @@ p{margin:0 0 1.05rem;max-width:64ch}
 /* ---------- header ---------- */
 .top{border-bottom:1px solid var(--rule);background:rgba(245,246,247,.94);
   backdrop-filter:blur(8px);position:sticky;top:0;z-index:40}
-.top__in{display:flex;align-items:center;justify-content:space-between;height:60px;gap:20px}
+.top__in{display:flex;align-items:center;height:60px;gap:24px}
 .name{font-weight:700;font-size:.98rem;letter-spacing:-.02em;text-decoration:none}
-.top nav{display:flex;align-items:center;gap:24px}
+.top nav{display:flex;align-items:center;gap:24px;margin-left:auto}
 .top nav a{font-size:.88rem;color:var(--ink-60);text-decoration:none}
 .top nav a:hover{color:var(--steel)}
 
@@ -73,13 +86,22 @@ p{margin:0 0 1.05rem;max-width:64ch}
 .btn--light{background:#fff;color:var(--navy)}
 .btn--light:hover{background:var(--paper-2)}
 :focus-visible{outline:2px solid var(--steel);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--navy);color:#fff;
+  padding:12px 20px;border-radius:0 0 6px 0;font-size:.9rem;font-weight:600;text-decoration:none}
+.skip:focus{left:0}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;
+    transition-duration:.01ms!important}
+}
 
 /* ---------- hero ---------- */
 .hero{padding:76px 0 72px}
 .hero__grid{display:grid;grid-template-columns:minmax(0,1fr) 268px;gap:56px;align-items:start}
-.open{display:inline-flex;align-items:center;gap:9px;font-size:.85rem;color:var(--steel);
+.open{display:inline-flex;align-items:flex-start;gap:9px;font-size:.85rem;color:var(--steel);
   margin-bottom:22px;font-weight:500}
-.open i{width:8px;height:8px;border-radius:50%;background:var(--steel);display:block}
+.open i{width:8px;height:8px;border-radius:50%;background:var(--steel);display:block;
+  flex:0 0 auto;margin-top:.55em}
 .hero h1 span{color:var(--steel)}
 .hero .lede{margin-top:24px}
 .hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
@@ -196,13 +218,6 @@ p{margin:0 0 1.05rem;max-width:64ch}
   text-decoration:none;display:block;margin-bottom:6px}
 a.path__hd:hover{color:var(--steel-light)}
 .path__sub{font-size:.9rem;color:rgba(255,255,255,.62);margin:0 0 18px;line-height:1.5}
-.mail{display:block;background:var(--navy-2);border:1px solid var(--rule-navy);
-  border-radius:8px;padding:26px}
-.mail__lbl{font-family:'IBM Plex Mono',monospace;font-size:.72rem;
-  color:rgba(255,255,255,.55);display:block;margin-bottom:8px}
-.mail__addr{font-size:clamp(1rem,.9rem + .5vw,1.2rem);font-weight:600;letter-spacing:-.02em;
-  word-break:break-all;text-decoration:none;display:block;margin-bottom:20px}
-.mail__addr:hover{color:var(--steel-light)}
 .elsewhere{border-top:1px solid var(--rule-navy);margin-top:22px;padding-top:6px}
 .elsewhere a{display:flex;justify-content:space-between;gap:16px;padding:12px 0;
   border-bottom:1px solid var(--rule-navy);font-size:.9rem;text-decoration:none}
@@ -226,7 +241,13 @@ a.path__hd:hover{color:var(--steel-light)}
   .role{grid-template-columns:1fr;gap:12px}
   .role__meta span{display:inline;margin-left:12px}
   .list a{grid-template-columns:1fr;gap:8px}
-  .top nav a:not(.btn){display:none}
+  .top__in{height:auto;padding-top:10px;padding-bottom:10px;flex-wrap:wrap;gap:10px 16px}
+  .name{flex:1 1 auto}
+  .top__cta{order:2}
+  .top nav{order:3;width:100%;margin-left:0;gap:20px;overflow-x:auto;padding-bottom:2px;
+    scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .top nav::-webkit-scrollbar{display:none}
+  .top nav a{font-size:.85rem;white-space:nowrap;flex:0 0 auto}
   .sec,.say{padding:58px 0}
   .hero{padding:56px 0 52px}
 }
@@ -235,11 +256,30 @@ a.path__hd:hover{color:var(--steel-light)}
   .figs,.reach,.kit{grid-template-columns:1fr}
   .fig,.reach div{padding-top:24px;padding-bottom:24px}
 }
+
+/* ---------- print ---------- */
+@media print{
+  :root{--paper:#fff;--paper-2:#fff}
+  .top,.skip,.hero__cta,.btn,.prompts,.path__sub{display:none!important}
+  body{font-size:11pt;line-height:1.45;background:#fff;color:#000}
+  p,li,small,.lede,.role__meta,.role__org,.list__d,.trio small,.kit li,.face__cap small
+    {color:#1A1A1A!important}
+  .band,.say,.idea{background:#fff!important;color:#000!important;border-block:1px solid #ccc}
+  .band *,.say *,.reach small,.fig small,.say p,.path__lbl{color:#000!important}
+  .sec,.say{padding:18pt 0}
+  .hero{padding:0 0 18pt}
+  .w{max-width:none;padding:0}
+  .role,.list a,.half{break-inside:avoid}
+  .list a{grid-template-columns:minmax(0,200px) minmax(0,1fr)}
+  .list__a,.face{display:none}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:8pt;color:#555;word-break:break-all}
+  .elsewhere a::after{content:none}
+}
 </style>
-<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
 <body>
+
+<a class="skip" href="#top">Skip to content</a>
 
 <!-- ===== HEADER ===== -->
 <header class="top">
@@ -250,8 +290,8 @@ a.path__hd:hover{color:var(--steel-light)}
       <a href="#idea">The idea</a>
       <a href="#experience">Experience</a>
       <a href="#work">Work</a>
-      <a class="btn btn--solid btn--sm" href="#contact">Say hello</a>
     </nav>
+    <a class="btn btn--solid btn--sm top__cta" href="#contact">Say hello</a>
   </div>
 </header>
 
@@ -287,10 +327,10 @@ a.path__hd:hover{color:var(--steel-light)}
     </div>
 
     <figure class="face" style="margin:0">
-      <img src="portrait.jpg" alt="Sumanta Das Bairagya">
+      <img src="portrait.jpg" width="400" height="400" alt="Portrait of Sumanta Das Bairagya">
       <figcaption class="face__cap">
         <b>Sumanta Das Bairagya</b>
-        <small>Co-Founder &amp; Head of Global Community, Krako.xyz · India</small>
+        <small>Co-Founder &amp; Head of Global Community, Krako.xyz (Paris) · based in India</small>
       </figcaption>
     </figure>
   </div>
@@ -399,7 +439,7 @@ a.path__hd:hover{color:var(--steel-light)}
   <div class="w">
     <div class="sec__head">
       <span class="eyebrow">Experience</span>
-      <h2>Research, then product, then community.</h2>
+      <h2>Community first, then research, then product.</h2>
     </div>
 
     <div class="roles">
@@ -562,6 +602,38 @@ a.path__hd:hover{color:var(--steel-light)}
   </div>
 </section>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sumanta Das Bairagya",
+  "url": "https://sumantacs.github.io/",
+  "image": "https://sumantacs.github.io/portrait.jpg",
+  "jobTitle": "Co-Founder & Head of Global Community",
+  "description": "I build AI products, and I know how to distribute them. Founder of a global AI and machine learning community of 600,000+ members.",
+  "email": "mailto:sumanta.ai.cs@gmail.com",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Krako.xyz",
+    "url": "https://krako.xyz"
+  },
+  "knowsAbout": [
+    "Large language models",
+    "Retrieval-augmented generation",
+    "AI agents",
+    "Knowledge graphs",
+    "Developer relations",
+    "Community building"
+  ],
+  "sameAs": [
+    "https://github.com/sumantacs",
+    "https://www.linkedin.com/in/sumanta-das-bairagya-055b5617b",
+    "https://x.com/Sumanta_krako",
+    "https://krako.xyz"
+  ]
+}
+</script>
+
 </main>
 
 <footer class="w end">
@@ -572,16 +644,46 @@ a.path__hd:hover{color:var(--steel-light)}
 <script>
 
 var CALENDLY_URL = "https://calendly.com/sumanta-ai-cs/30min";
+var calendlyState = "idle";          // idle -> loading -> ready
+
+// The widget is ~100KB of CSS+JS that most visitors never need, so it is only
+// fetched once someone actually shows intent. Until then the links are plain
+// anchors to Calendly, which still work with JavaScript disabled or blocked.
+function loadCalendly(onReady) {
+  if (calendlyState === "ready") { onReady(); return; }
+  if (calendlyState === "loading") { return; }
+  calendlyState = "loading";
+
+  var css = document.createElement("link");
+  css.rel = "stylesheet";
+  css.href = "https://assets.calendly.com/assets/external/widget.css";
+  document.head.appendChild(css);
+
+  var js = document.createElement("script");
+  js.src = "https://assets.calendly.com/assets/external/widget.js";
+  js.onload = function () { calendlyState = "ready"; onReady(); };
+  js.onerror = function () { calendlyState = "idle"; };  // fall back to the href
+  document.head.appendChild(js);
+}
 
 document.querySelectorAll(".js-cal").forEach(function (el) {
   el.href = CALENDLY_URL;            // works even if the widget fails to load
   el.target = "_blank";
   el.rel = "noopener";
+
+  // Warm the widget on hover/focus so the click feels instant.
+  ["pointerenter", "focus"].forEach(function (evt) {
+    el.addEventListener(evt, function () { loadCalendly(function () {}); }, { once: true });
+  });
+
   el.addEventListener("click", function (e) {
     if (window.Calendly) {           // open the popup instead of a new tab
       e.preventDefault();
       window.Calendly.initPopupWidget({ url: CALENDLY_URL });
+      return;
     }
+    // Not loaded yet: start fetching, but let the new tab open regardless.
+    loadCalendly(function () {});
   });
 });
 </script>
